@@ -1,0 +1,9 @@
+@if (users$ | async; as users) {
+<ul class="user-list">
+  @for (user of users; track user.id) {
+  <li>
+    <app-user-item [user]="user" />
+  </li>
+  }
+</ul>
+}
